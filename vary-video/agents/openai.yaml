@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vary Video"
+  short_description: "Generate cohesive stock, data-rendered, or AI variants of a Remotion edit spec"
+  default_prompt: "Create a new variant of this video project with fresh shots, remixed scene layouts, and updated copy using vary-video."
+policy:
+  allow_implicit_invocation: false

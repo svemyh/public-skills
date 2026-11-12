@@ -1,0 +1,6 @@
+interface:
+  display_name: "Clone Video"
+  short_description: "Decompile any video into a frame-accurate, editable Remotion spec with SSIM comparison"
+  default_prompt: "Clone this video into a decompiled Remotion spec and report per-scene SSIM using clone-video."
+policy:
+  allow_implicit_invocation: false

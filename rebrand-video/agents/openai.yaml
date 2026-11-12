@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rebrand Video"
+  short_description: "Swap brand palette, fonts, mark, copy, and product captures on a cloned Remotion video"
+  default_prompt: "Rebrand this cloned video project using our brand.json kit and verify every frame is clean using rebrand-video."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,27 @@
+{
+  "name": "Acme",
+  "wordmark": "Acme",
+  "wordmarkWeight": 600,
+  "about": "Acme builds cloud developer workflows that turn issues and pull requests into verified deployments inside a team's existing GitHub and Slack setup. Calm editorial aesthetic: warm paper #F6F7F3, near-black #141414 ink, vermilion #D94E28 accent.",
+  "palette": {
+    "bg": "#F6F7F3",
+    "fg": "#141414",
+    "accent": "#D94E28",
+    "muted": "#7A7A75"
+  },
+  "fonts": {
+    "display": "Inter",
+    "mono": "JetBrains Mono",
+    "wordmark": "Space Grotesk"
+  },
+  "mark": "acme-mark.svg",
+  "text": {
+    "where the future gets built": "where software ships on time"
+  },
+  "replace": {
+    "tag:brand:screenshot": [
+      "screens/workspace.svg",
+      "screens/pull-request.svg"
+    ]
+  }
+}

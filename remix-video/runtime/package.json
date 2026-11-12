@@ -1,0 +1,30 @@
+{
+  "name": "video-rea-runtime",
+  "description": "Self-contained Remotion + CLI runtime for the video-rea agent skills (remix-video, clone-video, vary-video, rebrand-video, compose-video, video-tools).",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "vrea": "src/cli/index.ts"
+  },
+  "scripts": {
+    "vrea": "bun src/cli/index.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.10.1",
+    "@remotion/cli": "4.0.538",
+    "@remotion/google-fonts": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "lucide-react": "0.468.0",
+    "react": "19",
+    "react-dom": "19",
+    "remotion": "4.0.538",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/react": "^19.3.0",
+    "typescript": "^5.8.2"
+  }
+}

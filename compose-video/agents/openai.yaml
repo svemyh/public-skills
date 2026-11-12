@@ -1,0 +1,6 @@
+interface:
+  display_name: "Compose Video"
+  short_description: "Score variants with ElevenLabs sound, render a review board, and compose section picks"
+  default_prompt: "Add sound to each variant, render the review board, and compose the picked cut using compose-video."
+policy:
+  allow_implicit_invocation: false

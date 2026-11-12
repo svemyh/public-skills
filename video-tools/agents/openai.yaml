@@ -1,0 +1,6 @@
+interface:
+  display_name: "Video Tools"
+  short_description: "Blender real-data renders, archive imagery, Pierre code diffs, fal, Pexels, ElevenLabs, and audio sync scripts"
+  default_prompt: "Pick the right production tool and scripts for each shot and sound in this video project using video-tools."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Remix Video"
+  short_description: "Clone any video into Remotion, rebrand it, generate variants with sound, and compose the best cut"
+  default_prompt: "Clone and remix this video for our brand with three variants and a review board using remix-video."
+policy:
+  allow_implicit_invocation: false
