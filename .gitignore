@@ -1,0 +1,9 @@
+node_modules/
+**/node_modules/
+.DS_Store
+*.mp4
+*.m4a
+*.wav
+out/
+dist/
+.cache/

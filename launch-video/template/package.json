@@ -1,0 +1,19 @@
+{
+  "name": "launch-video-runtime",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@remotion/cli": "4.0.538",
+    "@remotion/google-fonts": "4.0.538",
+    "@remotion/media": "4.0.538",
+    "react": "19",
+    "react-dom": "19",
+    "remotion": "4.0.538",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/react": "^19.3.0",
+    "typescript": "^5.8.2"
+  }
+}

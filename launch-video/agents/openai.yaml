@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launch Video"
+  short_description: "Render a 1080p60 product launch film from an X post and a website or brand profile"
+  default_prompt: "Create a 30-second 1080p60 launch video from this X post and website using the launch-video skill."
