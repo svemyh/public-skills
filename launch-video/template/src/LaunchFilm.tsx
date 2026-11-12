@@ -6,6 +6,15 @@ import { AbsoluteFill, Easing, Img, interpolate, random, Sequence, staticFile, u
 import type { CompiledFilm, LaunchScene } from "./schema";
 
 const inter = loadInter("normal", { weights: ["400", "500", "600"], subsets: ["latin"] });
+function isLightHex(hex: string): boolean {
+  const h = hex.replace("#", "");
+  if (h.length < 6) return false;
+  const r = Number.parseInt(h.slice(0, 2), 16) / 255;
+  const g = Number.parseInt(h.slice(2, 4), 16) / 255;
+  const b = Number.parseInt(h.slice(4, 6), 16) / 255;
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.62;
+}
+
 const clampOpts = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = (frame: number, at: number, frames: number) =>
   interpolate(frame, [at, at + frames], [0, 1], { ...clampOpts, easing: Easing.out(Easing.cubic) });
@@ -383,12 +392,12 @@ const Mosaic: React.FC<{ m: NonNullable<LaunchScene["mosaic"]>; markSrc: string;
         return (
           <g key={i} opacity={opacity} transform={`rotate(${tl.spin * e} ${x} ${y})`}>
             {tl.showMark && m.markStyle === "bars" ? (
-              <HexBarsMark cx={x} cy={y} r={r} ink={tl.color} paper={fg} />
+              <HexBarsMark cx={x} cy={y} r={r} ink={tl.color} paper={isLightHex(tl.color) ? "#111114" : fg} />
             ) : (
               <>
                 <path d={hexPath(x, y, r)} fill={tl.color} />
                 {tl.showMark && m.markStyle === "asset" && (
-                  <image href={staticFile(markSrc)} x={x - r * 0.54} y={y - r * 0.54} width={r * 1.08} height={r * 1.08} preserveAspectRatio="xMidYMid meet" />
+                  <image href={staticFile(markSrc)} x={x - r * 0.54} y={y - r * 0.54} width={r * 1.08} height={r * 1.08} preserveAspectRatio="xMidYMid meet" style={isLightHex(tl.color) ? { filter: "brightness(0.08)" } : undefined} />
                 )}
               </>
             )}
